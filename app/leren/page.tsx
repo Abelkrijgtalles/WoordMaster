@@ -11,9 +11,10 @@ const db = new PocketBase('https://minerva-online.pockethost.io');
 
 async function getDingen() {
     await db.admins.authWithPassword('abelvanhulst@gmail.com', '7g#Z5iVbQ&yTd8Not0tccSIwn5iwVRlDi45?$BtW');
-    const collection = await db.collection('woorden_te_leer').getFullList()
-    console.log(collection)
-    return collection
+    const collection = await db.collection('woorden_te_leer').getFullList(200 /* batch size */, {
+        sort: '-hoofdstuk,-na_hoofdstuk'
+    });
+    return collection.reverse()
 }
 
 export default async function Leren() {
