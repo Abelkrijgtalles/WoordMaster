@@ -1,15 +1,16 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/node': 18.11.9
-  '@types/react': 18.0.25
-  '@types/react-dom': 18.0.8
-  eslint: 8.27.0
-  eslint-config-next: 13.0.2
-  next: 13.0.2
-  react: 18.2.0
-  react-dom: 18.2.0
-  typescript: 4.8.4
+  '@types/node': latest
+  '@types/react': latest
+  '@types/react-dom': latest
+  eslint: latest
+  eslint-config-next: latest
+  next: latest
+  pocketbase: latest
+  react: latest
+  react-dom: latest
+  typescript: latest
 
 dependencies:
   '@types/node': 18.11.9
@@ -18,6 +19,7 @@ dependencies:
   eslint: 8.27.0
   eslint-config-next: 13.0.2_rmayb2veg2btbq6mbmnyivgasy
   next: 13.0.2_biqbaboplfbrettd7655fr4n2y
+  pocketbase: 0.7.4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   typescript: 4.8.4
@@ -1537,6 +1539,10 @@ packages:
   /picomatch/2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+    dev: false
+
+  /pocketbase/0.7.4:
+    resolution: {integrity: sha512-PvBRi4hbgbiBwDjhHa9lGD/ala8dSTjKeNAsHAgsXdIo4v9RgCk2s3Zqd/4UXVBgTJHVM6F7fGOZPvvJfSNVLQ==}
     dev: false
 
   /postcss/8.4.14:
