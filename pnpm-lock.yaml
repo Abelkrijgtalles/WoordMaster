@@ -1,25 +1,27 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@next/font': latest
   '@types/node': latest
   '@types/react': latest
   '@types/react-dom': latest
   eslint: latest
   eslint-config-next: latest
   next: latest
-  pocketbase: latest
+  pocketbase: 0.8.0-rc2
   react: latest
   react-dom: latest
   typescript: latest
 
 dependencies:
+  '@next/font': 13.0.2
   '@types/node': 18.11.9
   '@types/react': 18.0.25
   '@types/react-dom': 18.0.8
   eslint: 8.27.0
   eslint-config-next: 13.0.2_rmayb2veg2btbq6mbmnyivgasy
   next: 13.0.2_biqbaboplfbrettd7655fr4n2y
-  pocketbase: 0.7.4
+  pocketbase: 0.8.0-rc2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   typescript: 4.8.4
@@ -86,6 +88,10 @@ packages:
     resolution: {integrity: sha512-W+fIIIaFU7Kct7Okx91C7XDRGolv/w2RUenX2yZFeeNVcuVzDIKUcNmckrYbYcwrNQUSXmtwrs3g8xwast0YtA==}
     dependencies:
       glob: 7.1.7
+    dev: false
+
+  /@next/font/13.0.2:
+    resolution: {integrity: sha512-tLbyZCA1uF8HjbUEN5c4zB453yEzt5aT9VDhXPw1/eJhX4U0Q4lD3s3Bs+gpCjuLrEgILd56jQuzxgrMnWHH8A==}
     dev: false
 
   /@next/swc-android-arm-eabi/13.0.2:
@@ -1541,8 +1547,8 @@ packages:
     engines: {node: '>=8.6'}
     dev: false
 
-  /pocketbase/0.7.4:
-    resolution: {integrity: sha512-PvBRi4hbgbiBwDjhHa9lGD/ala8dSTjKeNAsHAgsXdIo4v9RgCk2s3Zqd/4UXVBgTJHVM6F7fGOZPvvJfSNVLQ==}
+  /pocketbase/0.8.0-rc2:
+    resolution: {integrity: sha512-+MzpwKNZBnshwKS3sBtWIaH3Ru7oISTG33OS7OO5P7SFqdOMwlXVgCyGw2lNVY9Tw/uf7wtDoJpqskBWGp9f9g==}
     dev: false
 
   /postcss/8.4.14:
