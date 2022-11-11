@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PocketBase from 'pocketbase';
 
 export const dynamic = 'auto',
@@ -41,7 +42,7 @@ export default async function LeerInfo({ params }) {
                 const woordje = await db.collection('latijnse_woorden').getOne(woord, {
                     expand: 'relField1,relField2.subRelField',
                 });
-                return <h1 key={woordje.id}>{woordje.latijn}</h1>
+                return <Link key={woordje.id} href={"/woorden/" + woordje.id + "/"}><h1>{woordje.latijn}</h1></Link>
             }))}
         </>
     )

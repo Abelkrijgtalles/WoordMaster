@@ -23,7 +23,7 @@ export default async function Leren() {
     return (
         <><h1>hi</h1>
             {dingen.map((ding) => {
-                return <Link key={ding.id} href={'/leren/' + ding.id}><h1>{ding.hoofdstuk}{ding.na_hoofdstuk}</h1></Link>
+                return <Link key={ding.id} href={'/leren/' + ding.id + "/"}><h1>{ding.hoofdstuk}{ding.na_hoofdstuk}</h1></Link>
             })}
         </>
     )
