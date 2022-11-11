@@ -37,6 +37,12 @@ export default async function LeerInfo({ params }) {
         <>
             <h1>Hi</h1>
             <h1>{leerding.hoofdstuk}{leerding.na_hoofdstuk}</h1>
+            {await Promise.all(leerding.woorden.map(async (woord) => {
+                const woordje = await db.collection('latijnse_woorden').getOne(woord, {
+                    expand: 'relField1,relField2.subRelField',
+                });
+                return <h1 key={woordje.id}>{woordje.latijn}</h1>
+            }))}
         </>
     )
 }
