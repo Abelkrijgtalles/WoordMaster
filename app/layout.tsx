@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-head-element */
 import { Roboto } from "@next/font/google"
+import NavBar from "./NavBar";
 
 const roboto = Roboto({ weight: '400' })
 
@@ -11,7 +12,10 @@ export default function RootLayout({
   return (
     <html lang="nl" className={roboto.className}>
       <head></head>
-      <body className="content">{children}</body>
+      <body className="content">
+        <NavBar/>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PocketBase from 'pocketbase';
 
 export const dynamic = 'auto',
@@ -34,8 +35,15 @@ export default async function Woord({ params }) {
 
     return (
         <>
-            <h1>Hi</h1>
-            <h1>{woord.latijn} = {woord.nederlands}</h1>
+            <h1>{woord.latijn}</h1>
+            <h1>{woord.latijn} betekent {woord.nederlands}</h1>
+            <h1>Verwanden zijn:</h1>
+            {await Promise.all(woord.andere_vormen.map(async (verbandje) => {
+                const verband = await db.collection('latijnse_woorden').getOne(verbandje, {
+                    expand: 'relField1,relField2.subRelField',
+                });
+                return <Link key={verband.id} href={"/woorden/" + verband.id + "/"}><h1>{verband.latijn}</h1></Link>
+            }))}
         </>
     )
 }
