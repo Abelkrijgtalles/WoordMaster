@@ -1,12 +1,7 @@
 import Link from 'next/link';
 import PocketBase from 'pocketbase';
 
-export const dynamic = 'auto',
-    dynamicParams = true,
-    revalidate = 60,
-    fetchCache = 'auto',
-    runtime = 'nodejs',
-    preferredRegion = 'auto'
+export const revalidate = 60
 
 const db = new PocketBase(process.env.POCKETBASE_SERVER)
 
