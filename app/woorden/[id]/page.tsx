@@ -36,6 +36,7 @@ export default async function Woord({ params }) {
     return (
         <>
             <h1>{woord.latijn}</h1>
+            <p>{woord.id}</p>
             <h1>{woord.latijn} betekent {woord.nederlands}</h1>
             <h1>Verwanden zijn:</h1>
             {await Promise.all(woord.andere_vormen.map(async (verbandje) => {
