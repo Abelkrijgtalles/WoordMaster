@@ -9,9 +9,9 @@ export const dynamic = 'auto',
     preferredRegion = 'auto'
 
 const db = new PocketBase('https://minerva-online.pockethost.io');
-db.admins.authWithPassword('abelvanhulst@gmail.com', '7g#Z5iVbQ&yTd8Not0tccSIwn5iwVRlDi45?$BtW');
 
 export async function generateStaticParams() {
+    await db.admins.authWithPassword('abelvanhulst@gmail.com', '7g#Z5iVbQ&yTd8Not0tccSIwn5iwVRlDi45?$BtW');
     const collection = await db.collection('woorden_te_leer').getFullList(200 /* batch size */, {
         sort: '-hoofdstuk,-na_hoofdstuk'
     });
@@ -29,6 +29,7 @@ export async function generateStaticParams() {
 // }
 
 export default async function LeerInfo({ params }) {
+    await db.admins.authWithPassword('abelvanhulst@gmail.com', '7g#Z5iVbQ&yTd8Not0tccSIwn5iwVRlDi45?$BtW');
     const leerding = await db.collection('woorden_te_leer').getOne(params.id, {
         expand: 'relField1,relField2.subRelField',
     });
