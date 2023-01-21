@@ -8,10 +8,10 @@ export const dynamic = 'auto',
     runtime = 'nodejs',
     preferredRegion = 'auto'
 
-const db = new PocketBase('https://minerva-online.pockethost.io');
+const db = new PocketBase(process.env.POCKETBASE_SERVER)
 
 export async function generateStaticParams() {
-    await db.admins.authWithPassword('abelvanhulst@gmail.com', '7g#Z5iVbQ&yTd8Not0tccSIwn5iwVRlDi45?$BtW');
+    await db.admins.authWithPassword(process.env.POCKETBASE_ADMIN_EMAIL, process.env.POCKETBASE_ADMIN_PASSWORD);
     const collection = await db.collection('latijnse_woorden').getFullList(200 /* batch size */, {
     });
 
@@ -28,7 +28,7 @@ export async function generateStaticParams() {
 // }
 
 export default async function Woord({ params }) {
-    await db.admins.authWithPassword('abelvanhulst@gmail.com', '7g#Z5iVbQ&yTd8Not0tccSIwn5iwVRlDi45?$BtW');
+    await db.admins.authWithPassword(process.env.POCKETBASE_ADMIN_EMAIL, process.env.POCKETBASE_ADMIN_PASSWORD);
     const woord = await db.collection('latijnse_woorden').getOne(params.id, {
         expand: 'relField1,relField2.subRelField',
     });

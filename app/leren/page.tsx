@@ -8,10 +8,10 @@ export const dynamic = 'auto',
     runtime = 'nodejs',
     preferredRegion = 'auto'
 
-const db = new PocketBase('https://minerva-online.pockethost.io');
+const db = new PocketBase(process.env.POCKETBASE_SERVER)
 
 async function getDingen() {
-    await db.admins.authWithPassword('abelvanhulst@gmail.com', '7g#Z5iVbQ&yTd8Not0tccSIwn5iwVRlDi45?$BtW');
+    await db.admins.authWithPassword(process.env.POCKETBASE_ADMIN_EMAIL, process.env.POCKETBASE_ADMIN_PASSWORD);
     const collection = await db.collection('woorden_te_leer').getFullList(200 /* batch size */, {
         sort: '-hoofdstuk,-na_hoofdstuk'
     });
