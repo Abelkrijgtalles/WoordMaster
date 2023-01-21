@@ -1,6 +1,7 @@
 # Minerva Online
 
 Een website voor Minerva
+
 Site: [https://minerva.abelkrijgtalles.nl](https://minerva.abelkrijgtalles.nl)
 
 ## Wat dingetjes
