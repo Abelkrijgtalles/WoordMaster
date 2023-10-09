@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-head-element */
-import { Roboto } from "@next/font/google"
+import { Roboto } from "next/font/google"
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 
