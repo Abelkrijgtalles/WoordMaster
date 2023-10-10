@@ -3,7 +3,7 @@ import { Roboto } from "next/font/google"
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 
-const roboto = Roboto({ weight: '400' })
+const roboto = Roboto({ weight: '400', subsets: ["latin"] })
 
 export default function RootLayout({
   children,

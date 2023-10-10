@@ -15,7 +15,7 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "next": "latest",
-    "pocketbase": "0.8.0-rc2",
+    "pocketbase": "latest",
     "react": "latest",
     "react-dom": "latest",
     "typescript": "latest"
