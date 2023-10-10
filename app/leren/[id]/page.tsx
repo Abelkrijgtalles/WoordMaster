@@ -11,6 +11,8 @@ export async function generateStaticParams() {
         sort: '-hoofdstuk,-na_hoofdstuk'
     });
 
+    db.authStore.clear();
+
     return collection.map((ding) => ({
         id: ding.id.toString(),
     }));
@@ -42,3 +44,5 @@ export default async function LeerInfo({ params }) {
         </>
     )
 }
+
+db.authStore.clear();

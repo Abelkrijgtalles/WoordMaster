@@ -10,6 +10,7 @@ async function getDingen() {
     const collection = await db.collection('woorden_te_leer').getFullList(200 /* batch size */, {
         sort: '-hoofdstuk,-na_hoofdstuk'
     });
+    db.authStore.clear();
     return collection.reverse()
 }
 

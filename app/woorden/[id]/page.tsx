@@ -9,6 +9,7 @@ export async function generateStaticParams() {
     await db.admins.authWithPassword(process.env.POCKETBASE_ADMIN_EMAIL, process.env.POCKETBASE_ADMIN_PASSWORD);
     const collection = await db.collection('latijnse_woorden').getFullList(200 /* batch size */, {
     });
+    db.authStore.clear();
 
     return collection.map((ding) => ({
         id: ding.id.toString(),
@@ -43,3 +44,5 @@ export default async function Woord({ params }) {
         </>
     )
 }
+
+db.authStore.clear();
