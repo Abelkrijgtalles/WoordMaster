@@ -25,11 +25,12 @@ export async function generateStaticParams() {
 
 export default async function Woord({ params }) {
     await db.admins.authWithPassword(process.env.POCKETBASE_ADMIN_EMAIL, process.env.POCKETBASE_ADMIN_PASSWORD);
-    db.authStore.clear();
 
     const woord = await db.collection('latijnse_woorden').getOne(params.id, {
         expand: 'relField1,relField2.subRelField',
     });
+    
+    db.authStore.clear();
 
     return (
         <>
