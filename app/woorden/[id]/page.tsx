@@ -7,7 +7,7 @@ const db = new PocketBase(process.env.POCKETBASE_SERVER)
 
 export async function generateStaticParams() {
     await db.admins.authWithPassword(process.env.POCKETBASE_ADMIN_EMAIL, process.env.POCKETBASE_ADMIN_PASSWORD);
-    const collection = await db.collection('latijnse_woorden').getFullList(200 /* batch size */, {
+    const collection = await db.collection('woorden').getFullList(200 /* batch size */, {
     });
     db.authStore.clear();
 
@@ -26,7 +26,7 @@ export async function generateStaticParams() {
 export default async function Woord({ params }) {
     await db.admins.authWithPassword(process.env.POCKETBASE_ADMIN_EMAIL, process.env.POCKETBASE_ADMIN_PASSWORD);
 
-    const woord = await db.collection('latijnse_woorden').getOne(params.id, {
+    const woord = await db.collection('woorden').getOne(params.id, {
         expand: 'relField1,relField2.subRelField',
     });
     
@@ -34,9 +34,10 @@ export default async function Woord({ params }) {
 
     return (
         <>
-            <h1>{woord.latijn}</h1>
-            <p>{woord.id}</p>
-            <h1>{woord.latijn} betekent {woord.nederlands}</h1>
+            <h1>{woord.eerste_taal}</h1>
+            <p><i>Id: {woord.id}</i></p>
+            <p>{woord.eerste_taal} betekent {woord.andere_taal}</p>
+            <Link href="/woorden">Ga terug naar de woorden</Link>
         </>
     )
 }
