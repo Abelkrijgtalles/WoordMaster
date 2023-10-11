@@ -1,5 +1,10 @@
+import Link from "next/link";
+
 export default function Footer() {
     return (
-        <p>Alle teksten, combinaties van woorden op verschillende plekken en oefeningen zijn van de makers van Minerva: Jori Castricum, Charles Hupperts, Niels Koopman, Maarten Prot en Riemer van der Veen.</p>
+        <>
+            <Link href="https://github.com/Abelkrijgtalles/minerva-online">GitHub</Link>
+            <p>Alles is gelicenseerd onder de GPL v3 License.</p>        
+        </>
     )
 }
