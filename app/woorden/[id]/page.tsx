@@ -27,7 +27,7 @@ export default async function Woord({ params }) {
     await db.admins.authWithPassword(process.env.POCKETBASE_ADMIN_EMAIL, process.env.POCKETBASE_ADMIN_PASSWORD);
 
     const woord = await db.collection('woorden').getOne(params.id, {
-        expand: 'relField1,relField2.subRelField',
+        expand: 'taal1,taal2',
     });
     
     db.authStore.clear();
@@ -36,7 +36,7 @@ export default async function Woord({ params }) {
         <>
             <h1>{woord.eerste_taal}</h1>
             <p><i>Id: {woord.id}</i></p>
-            <p>{woord.eerste_taal} betekent {woord.andere_taal}</p>
+            <p>In het {woord.expand.taal1.naam} betekent {woord.eerste_taal} {woord.andere_taal} in het {woord.expand.taal2.naam}</p>
             <Link href="/woorden">Ga terug naar de woorden</Link>
         </>
     )
