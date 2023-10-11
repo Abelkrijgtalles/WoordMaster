@@ -10,6 +10,7 @@ export default async function Woorden() {
     const collection = await db.collection('latijnse_woorden').getFullList(200 /* batch size */, {
         sort: '-latijn'
     });
+    db.authStore.clear();
     const woorden = collection.reverse()
     return (
         <>
@@ -20,5 +21,3 @@ export default async function Woorden() {
         </>
     )
 }
-
-db.authStore.clear();

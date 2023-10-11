@@ -39,10 +39,9 @@ export default async function LeerInfo({ params }) {
                 const woordje = await db.collection('latijnse_woorden').getOne(woord, {
                     expand: 'relField1,relField2.subRelField',
                 });
+                db.authStore.clear();
                 return <Link key={woordje.id} href={"/woorden/" + woordje.id + "/"}><h1>{woordje.latijn} - {woordje.id}</h1></Link>
             }))}
         </>
     )
 }
-
-db.authStore.clear();
