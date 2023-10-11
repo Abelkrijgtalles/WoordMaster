@@ -36,8 +36,16 @@ export default async function Woord({ params }) {
         <>
             <h1>{woord.eerste_taal}</h1>
             <p><i>Id: {woord.id}</i></p>
-            <p>In het {woord.expand.taal1.naam} betekent {woord.eerste_taal} {woord.andere_taal} in het {woord.expand.taal2.naam}</p>
-            <Link href="/woorden">Ga terug naar de woorden</Link>
+            <table>
+                <tr>
+                    <th>{woord.expand.taal1.naam}</th>
+                    <th>{woord.expand.taal2.naam}</th>
+                </tr>
+                <tr>
+                    <th>{woord.eerste_taal}</th>
+                    <th>{woord.andere_taal}</th>
+                </tr>
+            </table>
         </>
     )
 }
