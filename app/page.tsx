@@ -1,6 +1,7 @@
 "use client";
 
 import {ReactTyped} from "react-typed";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -25,7 +26,7 @@ export default function Home() {
                 />
             </div>
             <h1 className="mb-2">Dé manier om woorden te leren.</h1>
-            <p className="text-2xl">Waarom niet nu? Wat stopt je? Leer nu gewoon je woorden!</p>
+            <p className="text-2xl">Waarom niet nu? Wat stopt je? <Link href="/leren">Leer nu gewoon je woorden!</Link></p>
         </div>
     )
 }
