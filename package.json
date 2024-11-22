@@ -19,6 +19,7 @@
     "pocketbase": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-typed": "latest",
     "tailwind-merge": "latest",
     "tailwindcss-animate": "latest",
     "typescript": "latest"

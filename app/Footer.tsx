@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="text-center text-gray-500 mt-20">
+        <div className="text-center text-gray-500 mt-20 text-muted-foreground">
             <hr className="h-px my-8 bg-gray-500"/>
             <Link href="https://github.com/Abelkrijgtalles/WoordMaster">GitHub</Link>
             <p>Deze website heeft <Link
