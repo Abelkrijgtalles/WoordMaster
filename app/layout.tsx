@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-head-element */
 import { Roboto } from "next/font/google"
 import Footer from "./Footer";
 import NavBar from "./NavBar";
@@ -12,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl" className={roboto.className}>
-      <head></head>
+      <head><title>Woord Master</title></head>
       <body className="content">
         <NavBar/>
         {children}

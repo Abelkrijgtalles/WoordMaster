@@ -5,8 +5,8 @@ export default function Footer() {
         <>
         <br/>
         <br/>
-        <Link href="https://github.com/Abelkrijgtalles/minerva-online">GitHub</Link>
-        <p>Alles is gelicenseerd met <Link href="https://raw.githubusercontent.com/Abelkrijgtalles/minerva-online/main/LICENSE">de GNU GPL v3 License</Link>.</p>
+        <Link href="https://github.com/Abelkrijgtalles/WoordMaster">GitHub</Link>
+        <p>Deze website heeft <Link href="https://raw.githubusercontent.com/Abelkrijgtalles/WoordMaster/main/LICENSE">de GNU GPL v3 Licentie</Link>.</p>
         </>
     )
 }
