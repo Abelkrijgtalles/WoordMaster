@@ -1,3 +1,3 @@
-# Woord Master
+# WoordMaster
 
 Work in progress...
