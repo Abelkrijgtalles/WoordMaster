@@ -1,7 +1,7 @@
 export default function Home() {
     return (
         <>
-            <p>Woordmaster</p>
+            <p className="text-7xl">Woordmaster</p>
         </>
     )
 }

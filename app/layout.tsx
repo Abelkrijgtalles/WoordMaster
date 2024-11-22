@@ -1,6 +1,7 @@
 import { Roboto } from "next/font/google"
 import Footer from "./Footer";
 import NavBar from "./NavBar";
+import "./global.css"
 
 const roboto = Roboto({ weight: '400', subsets: ["latin"] })
 
