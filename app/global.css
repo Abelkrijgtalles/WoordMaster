@@ -5,3 +5,7 @@
 a {
     @apply font-bold;
 }
+
+h1 {
+    @apply text-4xl;
+}
